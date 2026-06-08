@@ -90,11 +90,11 @@ simulation
 Repository URL:
 
 ```text
-TBD after GitHub publish
+https://github.com/xianzuyang9-blip/bnb-risk-skill
 ```
 
 Demo URL:
 
 ```text
-TBD; use repository index.html or a static preview if available
+https://xianzuyang9-blip.github.io/bnb-risk-skill/
 ```

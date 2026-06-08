@@ -21,10 +21,10 @@ publish readiness passed
 
 ## GitHub Repository
 
-Recommended repository:
+Repository:
 
 ```text
-bnb-risk-skill
+https://github.com/xianzuyang9-blip/bnb-risk-skill
 ```
 
 Visibility:
@@ -55,13 +55,14 @@ hackathon
 
 ## After Publish
 
-1. Copy the public repository URL.
-2. Confirm `README.md` renders correctly.
-3. Confirm `index.html` is visible in the repo.
-4. Confirm GitHub Actions CI runs `npm run preflight`.
-5. Use `SUBMISSION.md` for the project narrative.
-6. Use `DORAHACKS_FIELDS.md` as clean copy for the hackathon submission form.
-7. Use the zip hash from `live-prospecting/2026-06-07-hackathon-status.md`.
+1. Public repository URL: `https://github.com/xianzuyang9-blip/bnb-risk-skill`.
+2. Public demo URL: `https://xianzuyang9-blip.github.io/bnb-risk-skill/`.
+3. Confirm `README.md` renders correctly.
+4. Confirm `index.html` is visible in the repo.
+5. Confirm GitHub Actions CI runs `npm run preflight`.
+6. Use `SUBMISSION.md` for the project narrative.
+7. Use `DORAHACKS_FIELDS.md` as clean copy for the hackathon submission form.
+8. Use the zip hash from `PUBLISH_READINESS.md`.
 
 ## Never Publish
 
