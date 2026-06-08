@@ -1,0 +1,46 @@
+{
+  "name": "bnb-risk-skill",
+  "version": "0.2.0",
+  "description": "Simulation-only risk gate strategy skill for BNB/EVM AI trading agents.",
+  "chain": "bnb-chain",
+  "mode": "simulation_only",
+  "category": "strategy-skill",
+  "inputs": {
+    "prices": "number[] of market prices, newest last",
+    "startingCapital": "number, default 10000",
+    "fastWindow": "number, default 3",
+    "slowWindow": "number, default 7",
+    "maxPositionPct": "number from 0.01 to 1",
+    "stopLossPct": "number from 0.01 to 0.8",
+    "takeProfitPct": "number from 0.01 to 2",
+    "dataSource": "optional string describing the market data source"
+  },
+  "outputs": {
+    "metrics": "backtest, risk, volatility, exposure, and trade quality metrics",
+    "riskFlags": "machine-readable risk reasons",
+    "dataQualityFlags": "market-data quality warnings",
+    "recommendation": "paper_trade_candidate | review_only | do_not_trade",
+    "agentAction": "machine-readable action boundary for an AI agent"
+  },
+  "blockedActions": [
+    "live_trade",
+    "wallet_connection",
+    "private_key_request",
+    "seed_phrase_request",
+    "autonomous_execution"
+  ],
+  "safety": {
+    "realTrading": false,
+    "walletConnection": false,
+    "privateKeys": false,
+    "exchangeCredentials": false,
+    "profitGuarantee": false,
+    "autonomousExecution": false,
+    "humanApprovalBeforeExecution": true
+  },
+  "commands": {
+    "test": "npm test",
+    "demo": "npm run demo",
+    "preflight": "npm run preflight"
+  }
+}

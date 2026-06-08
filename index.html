@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BNB Risk Skill Demo</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <div class="topline">
+            <p class="eyebrow" data-i18n="eyebrow">Track 2 Strategy Skill</p>
+            <div class="language-toggle" aria-label="Language">
+              <button type="button" data-lang="en">EN</button>
+              <button type="button" data-lang="zh">中文</button>
+              <button type="button" data-lang="es">ES</button>
+            </div>
+          </div>
+          <h1 data-i18n="title">BNB Risk Skill</h1>
+          <p class="summary" data-i18n="summary">
+            A simulation-only strategy skill that lets an AI trading agent test a strategy idea,
+            surface risk flags, and decide whether the next step should be paper trading, review,
+            or rejection.
+          </p>
+        </div>
+        <div class="guardrail">
+          <span data-i18n="guardrailKeys">No private keys</span>
+          <span data-i18n="guardrailTrades">No real trades</span>
+          <span data-i18n="guardrailPromises">No profit promises</span>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <form id="strategy-form" class="panel">
+          <h2 data-i18n="strategyInput">Strategy Input</h2>
+          <label>
+            <span data-i18n="startingCapital">Starting capital</span>
+            <input name="startingCapital" type="number" value="10000" min="100">
+          </label>
+          <label>
+            <span data-i18n="fastWindow">Fast MA window</span>
+            <input name="fastWindow" type="number" value="3" min="2">
+          </label>
+          <label>
+            <span data-i18n="slowWindow">Slow MA window</span>
+            <input name="slowWindow" type="number" value="7" min="3">
+          </label>
+          <label>
+            <span data-i18n="maxPosition">Max position %</span>
+            <input name="maxPositionPct" type="number" value="30" min="1" max="100">
+          </label>
+          <label>
+            <span data-i18n="stopLoss">Stop loss %</span>
+            <input name="stopLossPct" type="number" value="7" min="1" max="80">
+          </label>
+          <label>
+            <span data-i18n="takeProfit">Take profit %</span>
+            <input name="takeProfitPct" type="number" value="14" min="1" max="200">
+          </label>
+          <label class="wide">
+            <span data-i18n="priceSeries">Price series</span>
+            <textarea name="prices" rows="5">610, 618, 622, 617, 629, 641, 636, 648, 652, 646, 659, 671, 666, 675, 681, 674, 688, 694, 702, 697, 711, 706, 719, 728, 721, 733, 742, 736, 748, 755</textarea>
+          </label>
+          <button type="submit" data-i18n="runSimulation">Run Simulation</button>
+        </form>
+
+        <section class="panel result-panel">
+          <div class="result-heading">
+            <h2 data-i18n="riskResult">Risk Result</h2>
+            <span id="recommendation" class="badge">ready</span>
+          </div>
+          <div id="metrics" class="metrics"></div>
+          <h3 data-i18n="agentAction">Agent Action</h3>
+          <pre id="agent-action"></pre>
+          <h3 data-i18n="riskFlags">Risk Flags</h3>
+          <ul id="risk-flags" class="flags"></ul>
+          <h3 data-i18n="dataQuality">Data Quality</h3>
+          <ul id="data-quality" class="flags"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="./riskSkill.js"></script>
+    <script src="./browser-demo.js"></script>
+  </body>
+</html>

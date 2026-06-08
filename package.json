@@ -1,0 +1,13 @@
+{
+  "name": "bnb-risk-skill",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Risk-first strategy skill demo for BNB/EVM AI trading agents.",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "preflight": "node preflight.js",
+    "publish:readiness": "node publish-readiness.js"
+  },
+  "license": "MIT"
+}

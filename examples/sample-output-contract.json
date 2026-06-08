@@ -1,0 +1,41 @@
+{
+  "recommendation": "paper_trade_candidate | review_only | do_not_trade",
+  "metrics": {
+    "riskScore": "0-100",
+    "returnPct": "decimal percent",
+    "maxDrawdownPct": "decimal percent",
+    "tradeCount": "number",
+    "exposurePct": "decimal percent",
+    "winRatePct": "decimal percent"
+  },
+  "riskFlags": [
+    "drawdown_above_12_pct",
+    "large_position_size",
+    "overtrading_risk",
+    "high_market_exposure",
+    "high_strategy_volatility",
+    "loss_streak_risk"
+  ],
+  "dataQualityFlags": [
+    "short_backtest_sample",
+    "limited_cycles_for_slow_window",
+    "repeated_price_values"
+  ],
+  "agentAction": {
+    "type": "strategy_skill_result",
+    "chain": "bnb-chain",
+    "mode": "simulation_only",
+    "riskScore": "0-100",
+    "allowedNextStep": "human-readable next step",
+    "blockedActions": [
+      "live_trade",
+      "wallet_connection",
+      "private_key_request",
+      "seed_phrase_request",
+      "autonomous_execution"
+    ],
+    "privateKeyRequired": false,
+    "autonomousTradingAllowed": false,
+    "requiresHumanApprovalBeforeExecution": true
+  }
+}
