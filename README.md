@@ -8,6 +8,16 @@ BNB Risk Skill is a risk-first strategy skill for BNB/EVM AI trading agents. It 
 
 It deliberately does **not** trade real funds, request private keys, connect to a wallet, or make profit guarantees.
 
+## Judge Quick Review
+
+- Live demo: https://xianzuyang9-blip.github.io/bnb-risk-skill/
+- Judge guide: `JUDGES.md`
+- Manifest: `skill-manifest.json`
+- Example input: `examples/sample-input.json`
+- Example output contract: `examples/sample-output-contract.json`
+
+Fast path: open the live demo, click `Run Simulation`, then inspect `Risk Result`, `Risk Flags`, `Data Quality`, and the `Agent Action` JSON.
+
 ## Why This Fits Track 2
 
 The skill is meant to be used by an AI trading agent as a Strategy Skill:
@@ -84,6 +94,14 @@ The repository includes integration-oriented artifacts for judges and agent buil
 - `skill-manifest.json`: input/output contract, blocked actions, safety settings, and commands.
 - `examples/sample-input.json`: representative market-data input.
 - `examples/sample-output-contract.json`: expected output shape for an AI agent.
+
+## CMC Agent Hub Alignment
+
+BNB Risk Skill is designed to sit after a market-data retrieval step. A CMC Agent Hub integration can pass CMC-derived BNB/EVM prices into the `prices` input, then use the returned risk score, data-quality flags, blocked actions, and recommendation before any paper-trading or execution workflow.
+
+```text
+CMC / market data -> BNB Risk Skill -> risk score + blocked actions -> paper trade, review, or reject
+```
 
 ## Safety Boundaries
 

@@ -18,6 +18,7 @@ const requiredFiles = [
   'test.js',
   'package.json',
   'LICENSE',
+  'JUDGES.md',
   'DORAHACKS_FIELDS.md',
   'publish-readiness.js',
   'PUBLISH_CHECKLIST.md',
